@@ -1,0 +1,11 @@
+outline:
+	what's a logger?
+	Why loggers? real world examples
+	basic example - hello world
+	logging levels
+	logging to file
+	logging from different modules
+	handlers
+	Flask example
+
+
