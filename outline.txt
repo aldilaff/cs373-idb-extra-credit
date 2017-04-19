@@ -1,11 +1,52 @@
 outline:
 	what's a logger?
 	Why loggers? real world examples
-	basic example - hello world
+	basic example
 	logging levels
 	logging to file
 	logging from different modules
 	handlers
 	Flask example
+
+
+What's a logger?
+	A logger is an object that helps you log different events systematically. These events can have different levels such as warning, severe, debug, etc. They can also be written to different destinations like files and standard output.
+
+Why loggers?
+	Having log files makes it easier to go back and track the events that lead to a certain error. It is different from printing out statements in the sense that you can specify what level of severity this statement has. For example, a user requesting a page from flask could have a lower severity level and that could be logged on the server some where. However, a 500 (Internal Server Error) could have a higher severity error and it could notify the server admins through email instantly. 
+
+	Real world examples:
+		- Keeping track of all the errors that all user received.
+		- Keeping track of all the server errors.
+		- Keeping track of business related events.
+		- Our GCP example
+
+Basic example:
+
+Logging Levels from logging.py:
+
+	Level	When it’s used
+	DEBUG	Detailed information, typically of interest only when diagnosing problems.
+	INFO	Confirmation that things are working as expected.
+	WARNING	An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The software is still working as expected.
+	ERROR	Due to a more serious problem, the software has not been able to perform some function.
+	CRITICAL	A serious error, indicating that the program itself may be unable to continue running.
+	from: https://docs.python.org/3/howto/logging.html#logging-basic-tutorial
+
+Logging to file:
+	import logging
+	logging.basicConfig(filename='info.log')	
+
+
+
+Logging from different modules:
+	setup logger in main. import in different modules
+
+Handlers: 
+
+Flask example:
+	https://gist.github.com/ibeex/3257877
+
+
 
 
