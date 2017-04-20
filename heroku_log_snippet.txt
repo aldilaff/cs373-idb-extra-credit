@@ -1,0 +1,11 @@
+2017-04-20T16:00:40.584059+00:00 app[web.1]: Executing (default): COMMIT TRANSACTION;
+2017-04-20T16:00:40.623530+00:00 app[web.1]: Created event: Faculty Forum Lunch
+2017-04-20T16:00:40.624545+00:00 heroku[router]: at=info method=POST path="/api/events" host=freefoodfinders.seanywang.com request_id=5c3c3ad1-0d6b-4efd-aa60-3965e74cfb59 fwd="54.211.187.84" dyno=web.1 connect=1ms service=252ms status=200 bytes=815 protocol=http
+2017-04-20T16:21:04.116921+00:00 app[web.1]: Request: Getting expired events
+2017-04-20T16:21:04.704596+00:00 app[web.1]: Executing (default): SELECT [id], [eventTitle], [description], [startTime], [endTime], [hyperlink], [location], [extractedFrom], [freeFood], [freeSwag], [needRSVP] FROM [Events] AS [Event] WHERE [Event].[startTime] < N'2017-04-20 16:21:04.117';
+2017-04-20T16:21:04.772933+00:00 app[web.1]: All events sent
+2017-04-20T16:21:04.785608+00:00 heroku[router]: at=info method=GET path="/api/search/expired" host=freefoodfinders.seanywang.com request_id=fc1ad576-79a1-4ff5-a9e2-995773b8f21a fwd="54.92.250.51" dyno=web.1 connect=1ms service=667ms status=200 bytes=214 protocol=http
+2017-04-20T16:56:21.810184+00:00 heroku[web.1]: Idling
+2017-04-20T16:56:21.810770+00:00 heroku[web.1]: State changed from up to down
+2017-04-20T16:56:22.361826+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-04-20T16:56:22.511372+00:00 heroku[web.1]: Process exited with status 143
