@@ -7,7 +7,6 @@
 import logging
 
 logger = logging.getLogger('logger')
-logging.basicConfig(level=logging.DEBUG)
 
 logger.debug('Debug message.')
 logger.info('Info message.')
@@ -16,12 +15,13 @@ logger.error('THERE IS AN ERROR')
 logger.critical('NOOOOO!!!')
 
 # --------- CONSOLE OUTPUT ---------
-# WARNING:root:This is a warning.
-# ERROR:root:THERE IS AN ERROR
-# CRITICAL:root:NOOOOO!!!
+# This is a warning.
+# THERE IS AN ERROR
+# NOOOOO!!!
 # ----------------------------------
 
 print('------- logger Level: DEBUG -------')
+logging.basicConfig(level=logging.DEBUG)
 logger.setLevel(logging.DEBUG)
 
 logger.debug('Debug message.')
